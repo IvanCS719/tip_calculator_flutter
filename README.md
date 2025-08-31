@@ -38,7 +38,7 @@ Esta app permite:
 ## Instalación
 1. Clona el repositorio:
 	```bash
-	git clone [https://github.com/IvanCS719/tip_calculator_flutter.git](https://github.com/IvanCS719/tip_calculator_flutter.git)
+	git clone https://github.com/IvanCS719/tip_calculator_flutter.git
 	cd tip_calculator_flutter
 	```
 2. Instala las dependencias:
