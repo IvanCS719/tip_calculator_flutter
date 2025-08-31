@@ -20,15 +20,19 @@ Esta app permite:
 ## Capturas de pantalla
 
 - **Pantalla principal**
+
 ![PantallaPrincipal](https://i.postimg.cc/LX7LKwYr/pantalla-Principal.png)
  
 - **Selección de propina**
+
 ![SeleccionDePropina](https://i.postimg.cc/zB9RgHry/selec-Propina.png)
 
 - **División de cuenta**
+
 ![DivisionDeCuenta](https://i.postimg.cc/prbpTNf8/dividir-Cuenta.png)
 
 - **Cambio de tema**
+
 ![CambioDeTema](https://i.postimg.cc/PrHCnjrn/temaApp.png)
 
 ## Instalación
