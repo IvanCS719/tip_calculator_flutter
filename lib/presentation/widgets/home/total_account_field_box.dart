@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tip_calculator/presentation/providers/tip_calculator_provider.dart';
+import 'package:flutter/services.dart';
 
 
-class TotalAccountFieldBox extends ConsumerStatefulWidget {
-  const TotalAccountFieldBox({super.key});
+// Widget para el campo de texto donde el usuario ingresa el total de la cuenta.
+class TotalAccountFieldBox extends StatefulWidget {
+  final ValueChanged<String> onInitialTotalAccount;
+
+  const TotalAccountFieldBox({
+    super.key,
+    required this.onInitialTotalAccount
+    });
 
   @override
-  ConsumerState<TotalAccountFieldBox> createState() => _TotalAccountFieldBoxState();
+  State<TotalAccountFieldBox> createState() => _TotalAccountFieldBoxState();
 }
 
-class _TotalAccountFieldBoxState extends ConsumerState<TotalAccountFieldBox> {
+class _TotalAccountFieldBoxState extends State<TotalAccountFieldBox> {
   late final TextEditingController _controller;
 
   @override
@@ -40,10 +45,7 @@ class _TotalAccountFieldBoxState extends ConsumerState<TotalAccountFieldBox> {
       keyboardType: TextInputType.number,
       controller: _controller,
       decoration: inputDecoration,
-      onChanged: (value) {
-        final doubleValue = double.tryParse(value) ?? 0.0;
-        ref.read(totalAccountProvider.notifier).state = doubleValue;
-      },
+      onChanged: widget.onInitialTotalAccount,
     );
   }
 
